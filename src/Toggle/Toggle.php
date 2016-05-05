@@ -2,8 +2,8 @@
 
 namespace GetOlympus\Field;
 
-use GetOlympus\Hera\Controllers\Field;
-use GetOlympus\Hera\Controllers\Translate;
+use GetOlympus\Hera\Field\Controller\Field;
+use GetOlympus\Hera\Translate\Controller\Translate;
 
 /**
  * Builds Toggle field.
@@ -42,7 +42,7 @@ class Toggle extends Field
         // Build defaults
         $defaults = [
             'id' => '',
-            'title' => Translate::t('toggle.title'),
+            'title' => Translate::t('toggle.title', [], 'togglefield'),
             'default' => false,
             'description' => '',
             'enable' => '',
@@ -54,8 +54,8 @@ class Toggle extends Field
             'template' => 'pages',
 
             // texts
-            't_on' => Translate::t('toggle.on'),
-            't_off' => Translate::t('toggle.off'),
+            't_on' => Translate::t('toggle.on', [], 'togglefield'),
+            't_off' => Translate::t('toggle.off', [], 'togglefield'),
         ];
 
         // Build defaults data
