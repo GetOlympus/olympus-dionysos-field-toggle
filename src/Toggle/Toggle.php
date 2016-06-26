@@ -20,22 +20,21 @@ use GetOlympus\Hera\Translate\Controller\Translate;
 class Toggle extends Field
 {
     /**
-     * @var string
+     * Prepare variables.
      */
-    protected $faIcon = 'fa-toggle-off';
-
-    /**
-     * @var string
-     */
-    protected $template = 'toggle.html.twig';
+    protected function setVars()
+    {
+        $this->getModel()->setFaIcon('fa-toggle-off');
+        $this->getModel()->setScript('js'.S.'toggle.js');
+        $this->getModel()->setStyle('css'.S.'toggle.css');
+        $this->getModel()->setTemplate('toggle.html.twig');
+    }
 
     /**
      * Prepare HTML component.
      *
      * @param array $content
      * @param array $details
-     *
-     * @since 0.0.1
      */
     protected function getVars($content, $details = [])
     {
@@ -48,11 +47,6 @@ class Toggle extends Field
             'enable' => '',
             'disable' => '',
 
-            // details
-            'post' => 0,
-            'prefix' => '',
-            'template' => 'pages',
-
             // texts
             't_on' => Translate::t('toggle.on', [], 'togglefield'),
             't_off' => Translate::t('toggle.off', [], 'togglefield'),
@@ -62,9 +56,9 @@ class Toggle extends Field
         $vars = array_merge($defaults, $content);
 
         // Retrieve field value
-        $vars['val'] = $this->getValue($details, $vars['default'], $content['id']);
+        $vars['val'] = $this->getValue($content['id'], $details, $vars['default']);
 
         // Update vars
-        $this->getField()->setVars($vars);
+        $this->getModel()->setVars($vars);
     }
 }
