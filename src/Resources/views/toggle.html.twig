@@ -10,12 +10,10 @@
         <fieldset class="{{ val ? 'is-on' : 'is-off' }}">
             <label for="{{ id }}-on" class="on">
                 <input type="radio" name="{{ id }}" id="{{ id }}-on" value="1"{{ val ? ' checked="checked"' : '' }} />
-                <i class="fa fa-circle"></i>
             </label>
 
             <label for="{{ id }}-off" class="off">
                 <input type="radio" name="{{ id }}" id="{{ id }}-off" value="0"{{ val ? '' : ' checked="checked"' }} />
-                <i class="fa fa-circle-o"></i>
             </label>
         </fieldset>
 
