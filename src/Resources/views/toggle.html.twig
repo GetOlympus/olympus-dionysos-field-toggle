@@ -1,23 +1,14 @@
 {% extends template_path %}
 
-{% block id %}{{ id }}_toggle{% endblock %}
+{% block id %}{{ identifier }}{% endblock %}
 {% block label %}<label>{{ title|raw }}</label>{% endblock %}
 
 {% block field %}
-    <div class="olh-field-content toggle">
-        {{ disable|raw }}
+    <div class="olz-field toggle">
+        <input type="hidden" name="{{ name }}" value="" />
 
-        <fieldset class="{{ val ? 'is-on' : 'is-off' }}">
-            <label for="{{ id }}-on" class="on">
-                <input type="radio" name="{{ name }}" id="{{ id }}-on" value="1"{{ val ? ' checked="checked"' : '' }} />
-            </label>
-
-            <label for="{{ id }}-off" class="off">
-                <input type="radio" name="{{ name }}" id="{{ id }}-off" value="0"{{ val ? '' : ' checked="checked"' }} />
-            </label>
-        </fieldset>
-
-        {{ enable|raw }}
+        <input type="checkbox" name="{{ name }}" id="{{ identifier }}" value="1"{{ value ? ' checked="checked"' : '' }} />
+        <label for="{{ identifier }}"></label>
     </div>
 {% endblock %}
 

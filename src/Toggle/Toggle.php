@@ -20,45 +20,45 @@ use GetOlympus\Zeus\Translate\Controller\Translate;
 class Toggle extends Field
 {
     /**
-     * Prepare variables.
+     * @var string
      */
-    protected function setVars()
+    protected $style = 'css'.S.'toggle.css';
+
+    /**
+     * @var string
+     */
+    protected $template = 'toggle.html.twig';
+
+    /**
+     * @var string
+     */
+    protected $textdomain = 'togglefield';
+
+    /**
+     * Prepare defaults.
+     *
+     * @return array
+     */
+    protected function getDefaults()
     {
-        $this->getModel()->setFaIcon('fa-toggle-off');
-        $this->getModel()->setScript('js'.S.'toggle.js');
-        $this->getModel()->setStyle('css'.S.'toggle.css');
-        $this->getModel()->setTemplate('toggle.html.twig');
+        return [
+            'title' => Translate::t('toggle.title', $this->textdomain),
+            'default' => false,
+            'description' => '',
+        ];
     }
 
     /**
-     * Prepare HTML component.
+     * Prepare variables.
      *
-     * @param array $content
-     * @param array $details
+     * @param  object  $value
+     * @param  array   $contents
+     *
+     * @return array
      */
-    protected function getVars($content, $details = [])
+    protected function getVars($value, $contents)
     {
-        // Build defaults
-        $defaults = [
-            'id' => '',
-            'title' => Translate::t('toggle.title', [], 'togglefield'),
-            'default' => false,
-            'description' => '',
-            'enable' => '',
-            'disable' => '',
-
-            // texts
-            't_on' => Translate::t('toggle.on', [], 'togglefield'),
-            't_off' => Translate::t('toggle.off', [], 'togglefield'),
-        ];
-
-        // Build defaults data
-        $vars = array_merge($defaults, $content);
-
-        // Retrieve field value
-        $vars['val'] = $this->getValue($content['id'], $details, $vars['default']);
-
         // Update vars
-        $this->getModel()->setVars($vars);
+        return $contents;
     }
 }
