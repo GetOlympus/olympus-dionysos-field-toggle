@@ -47,6 +47,9 @@ echo $toggle ? 'Let\'s go!' : 'Not ready yet.';
 
 ## Release History
 
+* 0.0.11
+- [x] FIX: outline issue
+
 * 0.0.10
 - [x] FIX: box-sizing display on default WordPress admin theme
 
