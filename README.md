@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="https://img.icons8.com/nolan/2x/toggle-on.png">
+</p>
+
 # Toggle Field
 > This component is a part of the [**Olympus Zeus Core**][zeus-url] **WordPress** framework.
 
@@ -10,7 +14,7 @@
 Using `composer` in your PHP project:
 
 ```sh
-composer install getolympus/olympus-toggle-field
+composer require getolympus/olympus-toggle-field
 ```
 
 ## Field initialization
@@ -19,8 +23,8 @@ Use the following lines to add a `toggle field` in your **WordPress** admin page
 
 ```php
 return \GetOlympus\Field\Toggle::build('my_toggle_field_id', [
-    'title' => 'Get ready to rumble!',
-    'default' => true,
+    'title'       => 'Get ready to rumble!',
+    'default'     => true,
     'description' => 'Put it on to get started',
 ]);
 ```
@@ -47,14 +51,14 @@ echo $toggle ? 'Let\'s go!' : 'Not ready yet.';
 
 ## Release History
 
+* 0.0.13
+- [x] FIX: remove twig dependency from composer
+
+* 0.0.12
+- [x] FIX: remove zeus-core dependency from composer
+
 * 0.0.11
 - [x] FIX: outline issue
-
-* 0.0.10
-- [x] FIX: box-sizing display on default WordPress admin theme
-
-* 0.0.9
-- [x] ADD: new version compatible with Zeus-Core latest version
 
 ## Authors and Copyright
 
@@ -64,8 +68,8 @@ Achraf Chouk
 Please, read [LICENSE][license-blob] for more information.  
 [![MIT][license-image]][license-url]
 
-[https://github.com/crewstyle](https://github.com/crewstyle)  
-[http://fr.linkedin.com/in/achrafchouk](http://fr.linkedin.com/in/achrafchouk)
+<https://github.com/crewstyle>  
+<https://fr.linkedin.com/in/achrafchouk>
 
 ## Contributing
 
