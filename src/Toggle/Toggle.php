@@ -1,17 +1,16 @@
 <?php
 
-namespace GetOlympus\Field;
+namespace GetOlympus\Dionysos\Field;
 
 use GetOlympus\Zeus\Field\Field;
-use GetOlympus\Zeus\Utils\Translate;
 
 /**
  * Builds Toggle field.
  *
- * @package DionysosField
+ * @package    DionysosField
  * @subpackage Toggle
- * @author Achraf Chouk <achrafchouk@gmail.com>
- * @since 0.0.1
+ * @author     Achraf Chouk <achrafchouk@gmail.com>
+ * @since      0.0.1
  *
  */
 
@@ -40,7 +39,7 @@ class Toggle extends Field
     protected function getDefaults() : array
     {
         return [
-            'title' => Translate::t('toggle.title', $this->textdomain),
+            'title' => parent::t('toggle.title', $this->textdomain),
             'default' => false,
             'description' => '',
         ];

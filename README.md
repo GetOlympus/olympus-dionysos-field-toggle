@@ -1,28 +1,24 @@
-<p align="center">
-    <img src="https://img.icons8.com/nolan/2x/toggle-on.png">
-</p>
-
-# Toggle Field
-> This component is a part of the [**Olympus Zeus Core**][zeus-url] **WordPress** framework.
+# Dionysos Toggle Field
+> This component is a part of the **Olympus Dionysos fields** for **WordPress**.
 
 [![Olympus Component][olympus-image]][olympus-url]
 [![CodeFactor Grade][codefactor-image]][codefactor-url]
 [![Packagist Version][packagist-image]][packagist-url]
 
-## Installation
-
-Using `composer` in your PHP project:
-
 ```sh
-composer require getolympus/olympus-toggle-field
+composer require getolympus/olympus-dionysos-field-toggle
 ```
+
+<p align="center">
+    <img src="https://github.com/GetOlympus/olympus-dionysos-field-toggle/blob/master/assets/field-toggle-64.png" />
+</p>
 
 ## Field initialization
 
 Use the following lines to add a `toggle field` in your **WordPress** admin pages or custom post type meta fields:
 
 ```php
-return \GetOlympus\Field\Toggle::build('my_toggle_field_id', [
+return \GetOlympus\Dionysos\Field\Toggle::build('my_toggle_field_id', [
     'title'       => 'Get ready to rumble!',
     'default'     => true,
     'description' => 'Put it on to get started',
@@ -51,14 +47,15 @@ echo $toggle ? 'Let\'s go!' : 'Not ready yet.';
 
 ## Release History
 
-* 0.0.13
-- [x] FIX: remove twig dependency from composer
+0.0.14
+- New Olympus components compatibility
+- Change repository to be a part of Dionysos fields
 
-* 0.0.12
-- [x] FIX: remove zeus-core dependency from composer
+0.0.13
+- FIX: remove twig dependency from composer
 
-* 0.0.11
-- [x] FIX: outline issue
+0.0.12
+- FIX: remove zeus-core dependency from composer
 
 ## Authors and Copyright
 
@@ -73,7 +70,7 @@ Please, read [LICENSE][license-blob] for more information.
 
 ## Contributing
 
-1. Fork it (<https://github.com/GetOlympus/olympus-toggle-field/fork>)
+1. Fork it (<https://github.com/GetOlympus/olympus-dionysos-field-toggle/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
@@ -81,19 +78,19 @@ Please, read [LICENSE][license-blob] for more information.
 
 ---
 
-**Built with ♥ by [Achraf Chouk](http://github.com/crewstyle "Achraf Chouk") ~ (c) since a long time.**
+**Built with ♥ by [Achraf Chouk](https://github.com/crewstyle "Achraf Chouk") ~ (c) since a long time.**
 
 <!-- links & imgs dfn's -->
 [olympus-image]: https://img.shields.io/badge/for-Olympus-44cc11.svg?style=flat-square
 [olympus-url]: https://github.com/GetOlympus
 [zeus-url]: https://github.com/GetOlympus/Zeus-Core
-[codefactor-image]: https://www.codefactor.io/repository/github/GetOlympus/olympus-toggle-field/badge?style=flat-square
-[codefactor-url]: https://www.codefactor.io/repository/github/getolympus/olympus-toggle-field
+[codefactor-image]: https://www.codefactor.io/repository/github/GetOlympus/olympus-dionysos-field-toggle/badge?style=flat-square
+[codefactor-url]: https://www.codefactor.io/repository/github/getolympus/olympus-dionysos-field-toggle
 [getoption-url]: https://developer.wordpress.org/reference/functions/get_option/
-[license-blob]: https://github.com/GetOlympus/olympus-toggle-field/blob/master/LICENSE
+[license-blob]: https://github.com/GetOlympus/olympus-dionysos-field-toggle/blob/master/LICENSE
 [license-image]: https://img.shields.io/badge/license-MIT_License-blue.svg?style=flat-square
 [license-url]: http://opensource.org/licenses/MIT
-[packagist-image]: https://img.shields.io/packagist/v/getolympus/olympus-toggle-field.svg?style=flat-square
-[packagist-url]: https://packagist.org/packages/getolympus/olympus-toggle-field
+[packagist-image]: https://img.shields.io/packagist/v/getolympus/olympus-dionysos-field-toggle.svg?style=flat-square
+[packagist-url]: https://packagist.org/packages/getolympus/olympus-dionysos-field-toggle
 [twitter-image]: https://img.shields.io/badge/crewstyle-blue.svg?style=social&logo=twitter
-[twitter-url]: http://twitter.com/crewstyle
+[twitter-url]: https://twitter.com/crewstyle
