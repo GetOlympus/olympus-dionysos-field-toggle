@@ -1,17 +1,24 @@
 # Dionysos Toggle Field
 > This component is a part of the **Olympus Dionysos fields** for **WordPress**.
 
-[![Olympus Component][olympus-image]][olympus-url]
-[![CodeFactor Grade][codefactor-image]][codefactor-url]
-[![Packagist Version][packagist-image]][packagist-url]
-
 ```sh
 composer require getolympus/olympus-dionysos-field-toggle
 ```
 
+---
+
+[![Olympus Component][olympus-image]][olympus-url]
+[![CodeFactor Grade][codefactor-image]][codefactor-url]
+[![Packagist Version][packagist-image]][packagist-url]
+[![MIT][license-image]][license-blob]
+
+---
+
 <p align="center">
     <img src="https://github.com/GetOlympus/olympus-dionysos-field-toggle/blob/master/assets/field-toggle-64.png" />
 </p>
+
+---
 
 ## Field initialization
 
@@ -47,26 +54,15 @@ echo $toggle ? 'Let\'s go!' : 'Not ready yet.';
 
 ## Release History
 
+0.0.15
+- Use default `getVars` Zeus-Core method. No need to override it anymore
+
 0.0.14
 - New Olympus components compatibility
 - Change repository to be a part of Dionysos fields
 
 0.0.13
 - FIX: remove twig dependency from composer
-
-0.0.12
-- FIX: remove zeus-core dependency from composer
-
-## Authors and Copyright
-
-Achraf Chouk  
-[![@crewstyle][twitter-image]][twitter-url]
-
-Please, read [LICENSE][license-blob] for more information.  
-[![MIT][license-image]][license-url]
-
-<https://github.com/crewstyle>  
-<https://fr.linkedin.com/in/achrafchouk>
 
 ## Contributing
 
@@ -88,8 +84,5 @@ Please, read [LICENSE][license-blob] for more information.
 [getoption-url]: https://developer.wordpress.org/reference/functions/get_option/
 [license-blob]: https://github.com/GetOlympus/olympus-dionysos-field-toggle/blob/master/LICENSE
 [license-image]: https://img.shields.io/badge/license-MIT_License-blue.svg?style=flat-square
-[license-url]: http://opensource.org/licenses/MIT
 [packagist-image]: https://img.shields.io/packagist/v/getolympus/olympus-dionysos-field-toggle.svg?style=flat-square
 [packagist-url]: https://packagist.org/packages/getolympus/olympus-dionysos-field-toggle
-[twitter-image]: https://img.shields.io/badge/crewstyle-blue.svg?style=social&logo=twitter
-[twitter-url]: https://twitter.com/crewstyle
