@@ -44,18 +44,4 @@ class Toggle extends Field
             'description' => '',
         ];
     }
-
-    /**
-     * Prepare variables.
-     *
-     * @param  object  $value
-     * @param  array   $contents
-     *
-     * @return array
-     */
-    protected function getVars($value, $contents) : array
-    {
-        // Update vars
-        return $contents;
-    }
 }
