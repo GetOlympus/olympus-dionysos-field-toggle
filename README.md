@@ -54,15 +54,15 @@ echo $toggle ? 'Let\'s go!' : 'Not ready yet.';
 
 ## Release History
 
+0.0.16
+- Use WordPress default design to display toggle box
+
 0.0.15
 - Use default `getVars` Zeus-Core method. No need to override it anymore
 
 0.0.14
 - New Olympus components compatibility
 - Change repository to be a part of Dionysos fields
-
-0.0.13
-- FIX: remove twig dependency from composer
 
 ## Contributing
 
