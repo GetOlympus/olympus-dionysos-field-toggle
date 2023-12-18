@@ -39,8 +39,8 @@ class Toggle extends Field
     protected function getDefaults() : array
     {
         return [
-            'title' => parent::t('toggle.title', $this->textdomain),
-            'default' => false,
+            'title'       => parent::t('toggle.title', $this->textdomain),
+            'default'     => false,
             'description' => '',
         ];
     }
