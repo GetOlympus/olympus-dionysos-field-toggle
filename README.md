@@ -1,4 +1,12 @@
+<img src="https://github.com/GetOlympus/olympus-dionysos-field-toggle/blob/master/assets/field-toggle.png" align="left" />
+
 # Dionysos Toggle Field
+
+[![Olympus Component][olympus-image]][olympus-url]
+[![CodeFactor Grade][codefactor-image]][codefactor-url]
+[![Packagist Version][packagist-image]][packagist-url]
+[![MIT][license-image]][license-blob]
+
 > This component is a part of the **Olympus Dionysos fields** for **WordPress**.
 
 ```sh
@@ -7,16 +15,9 @@ composer require getolympus/olympus-dionysos-field-toggle
 
 ---
 
-[![Olympus Component][olympus-image]][olympus-url]
-[![CodeFactor Grade][codefactor-image]][codefactor-url]
-[![Packagist Version][packagist-image]][packagist-url]
-[![MIT][license-image]][license-blob]
+## Table of contents
 
----
-
-<p align="center">
-    <img src="https://github.com/GetOlympus/olympus-dionysos-field-toggle/blob/master/assets/field-toggle-64.png" />
-</p>
+[Field initialization](#field-initialization) • [Variables definition](#variables-definition) • [Retrive data](#retrive-data) • [Release history](#release-history) • [Contributing](#contributing)
 
 ---
 
@@ -32,7 +33,7 @@ return \GetOlympus\Dionysos\Field\Toggle::build('my_toggle_field_id', [
 ]);
 ```
 
-## Variables definitions
+## Variables definition
 
 | Variable      | Type    | Default value if not set | Accepted values |
 | ------------- | ------- | ------------------------ | --------------- |
@@ -52,17 +53,13 @@ $toggle = get_option('my_toggle_field_id', false);
 echo $toggle ? 'Let\'s go!' : 'Not ready yet.';
 ```
 
-## Release History
+## Release history
 
-0.0.16
-- Use WordPress default design to display toggle box
-
-0.0.15
-- Use default `getVars` Zeus-Core method. No need to override it anymore
-
-0.0.14
-- New Olympus components compatibility
-- Change repository to be a part of Dionysos fields
+| Version | Note |
+| :------ | :--- |
+| 0.0.16  | Use WordPress default design to display toggle box |
+| 0.0.15  | Use default `getVars` Zeus-Core method. No need to override it anymore |
+| 0.0.14  | New Olympus components compatibility<br/>Change repository to be a part of Dionysos fields |
 
 ## Contributing
 
